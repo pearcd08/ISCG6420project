@@ -1,0 +1,86 @@
+body {
+  font-family: monospace, Lucida Console;
+}
+#outsideBox {
+  width: 600px;
+  height: 200px;
+  background-color: lightblue;
+}
+
+#greeting {
+  font-size: 65px;
+  margin-left: 30px;
+  color: #8600b3;
+  animation-name: greetingMove;
+  animation-duration: 8s;
+}
+
+#mainText {
+  font-size: 25px;
+  float: right;
+  color: lightblue;
+  animation-name: textMove;
+  animation-duration: 7s;
+  animation-delay: 5s;
+}
+#daisy {
+  position: absolute;
+  left: -300px;
+  top: 75px;
+  margin-left: 10px;
+  animation-name: moveDaisy;
+  animation-duration: 10s;
+  animation-delay: 10s;
+  animation-iteration-count: 2;
+}
+
+@keyframes greetingMove {
+  0% {
+    margin-left: -250px;
+    font-size: 65px;
+  }
+  50% {
+    margin-left: 130px;
+    font-size: 90px;
+  }
+  100% {
+    margin-left: 30px;
+    font-size: 65px;
+  }
+}
+@keyframes textMove {
+  0% {
+    font-size: 25px;
+  }
+  50% {
+    font-size: 75px;
+    color: blue;
+  }
+  100% {
+    font-size: 25px;
+  }
+}
+@keyframes moveDaisy {
+  0% {
+    margin-left: -300px;
+    transform: rotate(20deg);
+  }
+  10% {
+    margin-left: 30px;
+    transform: rotate(40deg);
+  }
+  50% {
+    margin-left: 380px;
+    transform: rotate(180deg);
+  }
+  90% {
+    margin-left: 30px;
+    transform: rotate(320deg);
+  }
+  100% {
+    margin-left: -10px;
+    transform: rotate(360deg);
+  }
+}
+
+
