@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Piha Lodge Booking System</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/BookingCSS.css" rel="stylesheet" />
+  </head>
+  <header>
+    <h1>Piha Lodge Booking System</h1>
+  </header>
+  <body>  
+    <br />
+    <label for="numberOfGuests">Number of Guests :</label>
+    <input type="number" id="guests" name="guests" min="0" max="5" />
+    <br />
+    <br />
+    <label for="cookingFacilities">Pick Booking Date :</label>
+    <input type="radio" id="cookingFacilities" name="cookingFacilities" />
+    <br />
+    <br />
+    <button onclick="document.location='BookingTwo.html'">Previous</button>
+    <button onclick="document.location='BookingFour.html'">Next</button>
+    <br />
+    <br />
+    <progress id="bookingProgress" value="50" max="100">50%</progress>
+  </body>
+</html>

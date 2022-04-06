@@ -1,0 +1,43 @@
+body {
+    background-color: #B7A077 ;    
+    margin-left: 200px;
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;  
+      
+  }
+  
+  h1 {
+    color: Black;
+    font-size: 60px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;    
+
+  }
+
+  .button{border: none;
+    color: white;
+    padding: 30px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 20px 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+
+  }
+
+  input[type='date']{
+    width: 110px;
+} 
+
+  input[type='number']{
+    width: 50px;
+} 
+
+.bookingProgress{
+    height: 200%;
+
+}

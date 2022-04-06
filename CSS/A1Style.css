@@ -1,7 +1,7 @@
 #cityBox {
   width: 800px;
   height: 300px;
-  background-image: url("assets/auckland.jpg");
+  background-image: url("../assets/auckland.jpg");
   overflow: hidden;
   position: relative;
   border: 3px solid black;
@@ -20,6 +20,7 @@
 #question {
   position: absolute;
   margin-left: 25px;
+  opacity: 0;
   font-family: cursive;
   font-size: 65px;
   color: black;
@@ -61,6 +62,12 @@
 
 @keyframes questionMove {
   0% {
+    margin-left: 25px;
+    font-size: 65px;
+    opacity: 0;
+  }
+
+  20% {
     margin-left: 25px;
     font-size: 65px;
     opacity: 1;
