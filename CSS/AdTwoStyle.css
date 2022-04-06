@@ -1,0 +1,81 @@
+
+
+
+#bannerContainer {
+    position: absolute;
+    background-color: rgb(13, 0, 255); 
+    width: 950px;
+    height: 300px;
+    left: 20px;
+    top: 20px;
+    background-image: url("../assets/desertroad.jpg");
+    overflow: hidden;
+  }
+
+  
+#logoContainer{
+    position: absolute;
+    background-color: white;
+    background-size: contain;
+    width: 950px;
+    height: 330px;
+    left: 0px;
+    top: -300px;
+  
+}
+
+#vw1{
+    height: 95px;
+    width: auto;
+    left: 400px;
+    top: 75px;        
+}
+
+
+
+#carContainer {
+  position: absolute;  
+  width: 500px;
+  height: 275px;
+  left: -600px;
+  top:  60px;
+}
+
+#car {
+  position: absolute;
+  background-size: contain;
+  width: 550px;
+  height: 275px;
+  left: 10px;
+  top: -50px;
+}
+
+#wheel1 {
+  height: 95px;
+  width: auto;
+  position: absolute;
+  left: 417px;
+  top: 132px;
+  z-index: 11;
+  transform: rotate(0deg);
+ 
+}
+
+#rim1 {
+  height: 95px;
+  width: auto;
+}
+
+#wheel2 {
+  height: 95px;
+  width: auto;
+  position: absolute;
+  left: 48px;
+  top: 132px;
+  z-index: 11;
+}
+
+#rim2 {
+  height: 95px;
+  width: auto;
+}
