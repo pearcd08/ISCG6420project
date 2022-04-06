@@ -10,6 +10,8 @@
     top: 20px;
     background-image: url("../assets/desertroad.jpg");
     overflow: hidden;
+    border: 2px solid #888;
+
   }
 
   
@@ -18,17 +20,28 @@
     background-color: white;
     background-size: contain;
     width: 950px;
-    height: 330px;
+    height: 300px;
     left: 0px;
     top: -300px;
   
 }
 
 #vw1{
-    height: 95px;
-    width: auto;
-    left: 400px;
-    top: 75px;        
+    height: 150px;
+    width: auto;   
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+   
+           
+}
+
+#link{
+  text-align: center;
+  font-family:cursive;
+  color: blue;
+  font-size: 20px;
 }
 
 
