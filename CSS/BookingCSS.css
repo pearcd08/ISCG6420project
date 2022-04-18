@@ -1,43 +1,201 @@
+#bookingContainer {
+  background-color: #3c3d3e;
+  width: 500px;
+  height: 400px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 7px;
+}
+
+#headingContainer {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  font-size: 24px;
+  text-shadow: 2px 2px #000000;
+}
+
+#title {
+  display: block;
+  color: aquamarine;
+  font-size: 15px;
+  text-align: center;
+  width: 500px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding-bottom: 40px;
+}
+
+#inputContainer {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: "Trebuchet MS";
+}
+
+#inputContainer label {
+  display: inline-block;
+  width: 230px;
+  text-align: right;
+  color: white;
+  font-size: 16px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+input[type="text"] {
+  width: 175px;
+  height: 20px;
+  border: none;
+  border-radius: 7px;
+}
+
+input[type="email"] {
+  width: 175px;
+  height: 20px;
+  border: none;
+  border-radius: 7px;
+}
+
+input[type="date"] {
+  width: 150px;
+  height: 20px;
+  border: none;
+  border-radius: 7px;
+}
+
+input[type="range"] {
+  width: 150px;
+}
+
+input[type="number"] {
+  width: 50px;
+  height: 20px;
+  border: none;
+  border-radius: 7px;
+}
+
 body {
-    background-color: #B7A077 ;    
-    margin-left: 200px;
-    font-size: 20px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;  
-      
-  }
-  
-  h1 {
-    color: Black;
-    font-size: 60px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;    
+  background-color: #b7a077;
+}
 
-  }
+#buttonContainer {
+  position: absolute;
+  text-align: center;
+  top: 450px;
+  width: 500px;
+}
 
-  .button{border: none;
-    color: white;
-    padding: 30px 40px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 20px 20px;
-    transition-duration: 0.4s;
-    cursor: pointer;
+#b1 {
+  display: inline-block;
+  margin-right: 60px;
+  width: 75px;
+  height: 25px;
+  font-size: 16px;
+  font-family: "Trebuchet MS";
+  border: none;
+  border-radius: 7px;
+}
 
+#b2 {
+  display: inline-block;
+  margin-left: 60px;
+  width: 75px;
+  height: 25px;
+  font-size: 16px;
+  font-family: "Trebuchet MS";
+  border: none;
+  border-radius: 7px;
+}
 
-  }
+#b1:hover {
+  background-color: aquamarine;
+  transition: 0.3s;
+}
 
-  input[type='date']{
-    width: 110px;
-} 
+#b2:hover {
+  background-color: aquamarine;
+  transition: 0.3s;
+}
 
-  input[type='number']{
-    width: 50px;
-} 
+#progressContainer {
+  position: absolute;
+  top: 500px;
+  text-align: center;
+  width: 500px;
+}
 
-.bookingProgress{
-    height: 200%;
+progress {
+  width: 300px;
+  height: 10px;
+  background: lightgray;
+}
 
+progress[value] {
+  width: 300px;
+  height: 10px;
+  border: none;
+  background: aquamarine;
+}
+
+#progressText {
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+#progressText2 {
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+#reportContainer {
+  background-color: white;
+  width: 275px;
+  height: 175px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -50px;
+  border: none;
+  border-radius: 7px;
+  text-align: center;
+}
+
+#termsContainer {
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    margin-top: 5px;
+}
+
+#paragraphContainer {
+ 
+  padding-left: 5px;
+}
+
+p { 
+  margin-left: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 14px;
+}
+
+#bookingLengthTxt {
+  background-color: #3c3d3e;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 14px;
+  margin-left: 270px;
 }

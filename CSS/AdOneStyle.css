@@ -7,15 +7,13 @@
   border: 3px solid black;
 }
 
-
 #lionRock {
-  visibility: hidden;
+  opacity: 0;
   animation-name: lionrockMove;
   animation-duration: 12s;
   animation-delay: 1s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
 }
-
 
 #question {
   position: absolute;
@@ -28,36 +26,122 @@
   animation-name: questionMove;
   animation-duration: 12s;
   animation-delay: 1s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
 }
 
 #piha {
-  position: absolute; 
+  position: absolute;
+  content: "Stay at Piha";
   margin-left: 25px;
   opacity: 0;
   font-family: cursive;
   font-size: 60px;
   color: yellow;
-  text-shadow: 2px 2px red;  
+  text-shadow: 2px 2px red;
   animation-name: pihaFade;
-  animation-duration: 12s; 
-  animation-delay: 5s; 
-    
-  animation-iteration-count: infinite;
+  animation-duration: 12s;
+  animation-delay: 5s;
+  animation-iteration-count: 1;
+  z-index: 1;
 }
 
 #paradise {
-  position: absolute; 
+  position: absolute;
   margin-left: 25px;
   opacity: 0;
   font-family: cursive;
   font-size: 60px;
   color: yellow;
-  text-shadow: 2px 2px red;  
+  text-shadow: 2px 2px red;
   animation-name: paradiseFade;
-  animation-delay: 5s; 
-  animation-duration: 12s;  
+  animation-delay: 5s;
+  animation-duration: 12s;
+  animation-iteration-count: 1;
+  z-index: 1;
+}
+
+#newZealand {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 50%;
+  font-family: cursive;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  background: #000;
+  animation-name: nzRotate;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
+  z-index: 1;
+}
+
+#balloon {
+  opacity: 0;
+  position: absolute;
+  animation-name: balloonMove;
+  animation-duration: 6s;
+  animation-delay: 6s;
+  animation-iteration-count: 1;
+  z-index: 1;
+  left: 60%;
+}
+
+#student {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  opacity: 0;
+  font-family: cursive;
+  font-size: 20px;
+  color: black;
+  z-index: 2;
+  animation-name: moveStudent;
+  animation-delay: 12s;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveStudent {
+  0% {
+    opacity: 1;
+    color: black;
+  }
+
+  50% {
+    opacity: 1;
+    color: red;
+  }
+
+  100% {
+    opacity: 1;
+    color: black;
+  }
+}
+
+@keyframes balloonMove {
+  0% {
+    opacity: 1;
+    top: 300px;
+  }
+  100% {
+    opacity: 1;
+    top: -250px;
+  }
+}
+
+@keyframes nzRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes questionMove {
@@ -91,93 +175,62 @@
     margin-left: 800px;
     font-size: 0px;
     opacity: 0;
-    transform: rotate(180deg)
+    transform: rotate(180deg);
   }
 }
 
 @keyframes lionrockMove {
   0% {
-    visibility: visible;
+    opacity: 1;
     margin-left: -2000px;
-
-
   }
 
   25% {
-    visibility: visible;
+    opacity: 1;
     margin-left: -775px;
-
-
   }
 
   50% {
-    visibility: visible;
+    opacity: 1;
     margin-left: 0px;
-    
-
-
   }
 
   75% {
-    visibility: visible;
+    opacity: 1;
     margin-left: 0px;
-
   }
-
-
 
   100% {
-    visibility: visible;
-    margin-left: -800px;
-
+    opacity: 0;
+    margin-left: 0px;
   }
-
-
 }
-
-
 
 @keyframes pihaFade {
   0% {
-    margin-top: -50px;
-
+    margin-top: -50px;    
     opacity: 1;
   }
 
-
   25% {
-
-    opacity: 1;
+    opacity: 1;    
     margin-top: 140px;
-    
-
-
   }
 
   26% {
     opacity: 0;
     margin-top: 140px;
-
-    
-    
-
-
   }
 
   50% {
     opacity: 0;
     margin-top: 140px;
-
   }
 
   100% {
-
-
     opacity: 0;
     margin-top: 140px;
   }
-
-
 }
 
 @keyframes paradiseFade {
@@ -186,37 +239,22 @@
     opacity: 0;
   }
 
-
   25% {
-
     opacity: 0;
-    margin-top: 140px;    
-
-
+    margin-top: 140px;
   }
 
   26% {
     opacity: 1;
     margin-top: 140px;
-
   }
 
   35% {
     opacity: 1;
     margin-top: 140px;
-    
-
   }
   50% {
     opacity: 0;
-    margin-top: 350px;  
-    
-  
-
+    margin-top: 350px;
   }
-
-
- 
-
-
 }

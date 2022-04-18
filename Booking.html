@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Piha Lodge Booking System</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/BookingCSS.css" rel="stylesheet" />
+    <script type="text/javascript" src="JS/BookingJS.js"></script>
+</head>
+<header>
+    <div id="menuDropdown">     
+        <select name="menu" id="menu" onchange="dropDownMenu(this)">   
+            <option value = "index.html">Index</option>
+            <option value = "AdOne.html">Advertisement One</option>   
+            <option value = "AdTwo.html">Advertisement Two</option>
+            <option value = "Storyboards/Ad1Storyboard.pdf">Storyboard One</option>
+            <option value = "Storyboards/Ad2Storyboard.pdf">Storyboard Two</option>
+            <option value = "Wireframes/wireframes.html">Wireframes</option>            
+            </select>    
+    </div>   
+    <div id = "headingContainer">
+        <h1>Piha Lodge Booking</h1>
+    </div>       
+</header>
+<body onload="displayPageOne()">  
+    <div id="bookingContainer">
+        <!-- Page one Div, personal details -->
+        <div style="display: none" id="page1">
+            <div id="title">
+                <h1>Personal Details</h1>
+            </div>
+            
+            <div id="inputContainer">
+                <label for="firstName">Full Name: </label>
+                <input type="text" id="firstName" />
+            </div>            
+            <div id="inputContainer">
+                <label for="emailAddress">Email Address: </label>
+                <input type="email" id="emailAddress" pattern=".+@globex\.com" />
+            </div>
+            
+            <div id="buttonContainer">
+                <button id="b1" onclick="document.location='index.html'">Back</button>
+                <button id="b2" onclick="displayPageTwo()">Next</button>
+            </div>
+            
+            <div id="progressContainer">
+                <progress value="0" max="100">75%</progress>
+                <p id="progressText">Booking Progress: 0%</p>
+            </div>
+        </div>
+
+        <!-- Page Two Div, duration of stay -->
+        <div style="display: none" id="page2">
+            <div id="title">
+                <h1>Booking Duration</h1>
+            </div>
+            
+            <div id="inputContainer">
+                <label for="bookingDate">Booking Date:</label>
+                <input type="date" id="bookingDate" name="bookingDate" />
+            </div>
+            
+            <div id="inputContainer">
+                <label for="bookingLength">Booking Length:</label>
+                <input type="range" id="bookingLength" min="1" max="14" onchange="updateTextRange(this.value);">
+                <input type="text" id="bookingLengthTxt" value="">
+            </div>
+            
+            <div id="buttonContainer">
+                <button id="b1" onclick="displayPageOne()">Previous</button>
+                <button id="b2" onclick="displayPageThree()">Next</button>
+            </div>
+            
+            <div id="progressContainer">
+                <progress value="25" max="100"> 0% </progress>
+                <p id="progressText">Booking Progress: 25%</p>
+            </div>
+        </div>
+
+        <!-- Page Three Div, guest selection -->
+        <div style="display: none" id="page3">
+            <div id="title">
+                <h1>Guest Details</h1>
+            </div>
+            
+            <div id="inputContainer">
+                <label for="numberOfGuests">Number of Guests :</label>
+                <input type="number" id="numberOfGuests" min="0" max="5" value="0" onKeyDown="returnfalse" />
+            </div>
+           
+            <div id="inputContainer">
+                <label for="checkboxSurfboard">Require surfboards?:</label>
+                <input type="checkbox" id="checkboxSurfboard" />
+            </div>
+           
+            <div id="buttonContainer">
+                <button id="b1" onclick="displayPageTwo()">Previous</button>
+                <button id="b2" onclick="displayPageFour()">Next</button>
+            </div>
+            
+            <div id="progressContainer">
+                <progress value="50" max="100"> 50% </progress>
+                <p id="progressText">Booking Progress: 50%</p>
+            </div>
+        </div>
+
+        <!-- Page Four Div, optional page -->
+        <div style="display: none" id="page4">
+            <div id="title">
+                <h1>Surfboard Hire</h1>
+            </div>
+            
+            <div id="inputContainer">
+                <label for="numberOfSurfboards">Number of Surfboards:</label>
+                <input type="number" id="numberOfSurfboards" min="0" max="5" value="1" onKeyDown="returnfalse" />
+            </div>
+            
+            <div id="inputContainer">
+                <label for="colorOfSurfboards">Surfboard Colour:</label>
+                <input type="color" id="colorOfSurfboards" value="yellow">
+            </div>
+           
+            <div id="buttonContainer">
+                <button id = "b1" onclick="displayPageThree()">Previous</button>
+                <button id = "b2" onclick="displayPageFive()">Next</button>
+            </div>
+            
+            <div id="progressContainer">
+                <progress value="75" max="100"> 0% </progress>
+                <p id="progressText">Booking Progress: 75%</p>
+            </div>
+        </div>
+
+        <!-- Page Five Div, confirmation page -->
+        <div style="display: none" id="page5">
+
+            <div id="title">
+                <h1>Confirm Details</h1>
+            </div>
+            <div id ="reportContainer">  
+                <div id="paragraphContainer">
+                    <p id="fullNameField">Null</p>
+                    <p id="emailAddressField">Null</p>
+                    <p id="bookingArrivalField">Null</p>
+                    <p id="bookingDepartingField">Null</p>
+                    <p id="numberOfGuestsField">Null</p>
+                    <p id="numberOfSurfboardsField">Null</p> 
+                </div>           
+                                   
+            </div>
+            <div id="termsContainer">
+                <label>Agree to T&C?</label>                 
+                <input type="radio" id="termsNo" name="radio" checked>
+                <label for="termsNo">No</label>
+                <input type="radio" id="termsYes" name="radio">
+                <label for = "termsYes">Yes</label>
+                     
+            </div>              
+
+            <div id="buttonContainer">
+                <button id = "b1" onclick="displayPageThree()">Previous</button>
+                <button id = "b2" onclick="confirmDetails()">Confirm</button>
+
+            </div>
+           
+            <div id="progressContainer">
+                <progress id ="pBar" value="99" max="100"> 0% </progress>
+                <p id="progressText2">Booking Progress: 99%</p>
+            </div>
+        </div>
+</body>
+
+</html>
